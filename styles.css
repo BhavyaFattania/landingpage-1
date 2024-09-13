@@ -1,68 +1,98 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fdf8ed;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
-    max-width: 600px;
-    padding: 20px;
+  text-align: center;
+  padding: 50px 20px;
 }
 
-.header .dots {
-    width: 50px;
-    height: 5px;
-    background-image: linear-gradient(to right, red, yellow, green, blue, indigo, violet);
-    margin: 0 auto 20px auto;
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots {
+  background: #333;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 h1 {
-    font-size: 60px;
-    margin: 0;
-    font-weight: bold;
-    color: #333;
+  font-size: 3rem;
+  margin: 20px 0;
 }
 
 h1 span {
-    display: inline-block;
-    background: linear-gradient(to right, #E07026, #C4A349, #5970C5);
-    -webkit-background-clip: text;
-    color: transparent;
+  color: #007BFF;
 }
 
 p {
-    font-size: 16px;
-    color: #666;
-    margin: 20px 0;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 button {
-    border: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
 }
 
 .get-started {
-    background-color: #333;
-    color: white;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
 }
 
 .dev-docs {
-    background-color: transparent;
-    color: #333;
-    border: 1px solid #333;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Parallax Styles */
+.image-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-image {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+.parallax-caption {
+  position: absolute;
+  bottom: 50px;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Progress Bar */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: #007BFF;
+  width: 100%;
+  transform-origin: 0%;
 }
